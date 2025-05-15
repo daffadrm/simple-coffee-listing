@@ -20,7 +20,7 @@ export default function Home() {
   }, [fetchData]);
   return (
     <div className="min-h-screen bg-black">
-      <div className="relative h-50 bg-[url('/images/bg-cafe.jpg')] z-10 bg-cover bg-center w-full"></div>
+      <div className="relative h-[300px] bg-[url('/images/bg-cafe.jpg')] z-10 bg-cover bg-center w-full"></div>
       <div className="absolute items-center bg-[#2c2e31] z-50 py-16 px-16 top-1/2  left-1/2 -translate-x-1/2 rounded-2xl max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-white text-3xl font-bold mb-3">Our Collection</h2>
