@@ -2,7 +2,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { getData } from "./server/coffee";
 import CardList, { TypeData } from "@/components/card/cardList";
-import { Star } from "lucide-react";
 
 export default function Home() {
   const [data, setData] = useState([]);
