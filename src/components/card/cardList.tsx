@@ -42,9 +42,23 @@ const CardList = ({ data }: TypeCardList) => {
           </span>
         </div>
         <div className="flex items-center">
-          <Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />
-          <span className="text-white text-sm ml-1">{data.rating}</span>
-          <span className="text-gray-400 text-xs ml-1">({data.votes})</span>
+          {data.rating ? (
+            <>
+              <Star className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />
+              <span className="text-white text-sm ml-1">{data.rating}</span>
+            </>
+          ) : (
+            <>
+              <Star className="h-3.5 w-3.5" />
+              <span className="text-white text-sm ml-1">No ratings</span>
+            </>
+          )}
+
+          {data.votes > 0 && (
+            <span className="text-gray-400 text-xs ml-1">
+              {`(${data.votes} votes)`}
+            </span>
+          )}
           {!data.available && (
             <span className="text-red-500 tex-xs ml-auto">Sold Out</span>
           )}
